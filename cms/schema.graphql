@@ -1094,59 +1094,59 @@ input CreateInitialUserInput {
 }
 
 type Query {
-  users(where: UserWhereInput! = {}, orderBy: [UserOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: UserWhereUniqueInput): [User!]
   user(where: UserWhereUniqueInput!): User
+  users(where: UserWhereInput! = {}, orderBy: [UserOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: UserWhereUniqueInput): [User!]
   usersCount(where: UserWhereInput! = {}): Int
-  announcements(where: AnnouncementWhereInput! = {}, orderBy: [AnnouncementOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: AnnouncementWhereUniqueInput): [Announcement!]
   announcement(where: AnnouncementWhereUniqueInput!): Announcement
+  announcements(where: AnnouncementWhereInput! = {}, orderBy: [AnnouncementOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: AnnouncementWhereUniqueInput): [Announcement!]
   announcementsCount(where: AnnouncementWhereInput! = {}): Int
-  abouts(where: AboutWhereInput! = {id: {equals: 1}}, orderBy: [AboutOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: AboutWhereUniqueInput): [About!]
   about(where: AboutWhereUniqueInput! = {id: 1}): About
+  abouts(where: AboutWhereInput! = {id: {equals: 1}}, orderBy: [AboutOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: AboutWhereUniqueInput): [About!]
   aboutsCount(where: AboutWhereInput! = {id: {equals: 1}}): Int
-  burials(where: BurialWhereInput! = {id: {equals: 1}}, orderBy: [BurialOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: BurialWhereUniqueInput): [Burial!]
   burial(where: BurialWhereUniqueInput! = {id: 1}): Burial
+  burials(where: BurialWhereInput! = {id: {equals: 1}}, orderBy: [BurialOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: BurialWhereUniqueInput): [Burial!]
   burialsCount(where: BurialWhereInput! = {id: {equals: 1}}): Int
-  feedbacks(where: FeedbackWhereInput! = {id: {equals: 1}}, orderBy: [FeedbackOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: FeedbackWhereUniqueInput): [Feedback!]
   feedback(where: FeedbackWhereUniqueInput! = {id: 1}): Feedback
+  feedbacks(where: FeedbackWhereInput! = {id: {equals: 1}}, orderBy: [FeedbackOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: FeedbackWhereUniqueInput): [Feedback!]
   feedbacksCount(where: FeedbackWhereInput! = {id: {equals: 1}}): Int
-  footers(where: FooterWhereInput! = {id: {equals: 1}}, orderBy: [FooterOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: FooterWhereUniqueInput): [Footer!]
   footer(where: FooterWhereUniqueInput! = {id: 1}): Footer
+  footers(where: FooterWhereInput! = {id: {equals: 1}}, orderBy: [FooterOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: FooterWhereUniqueInput): [Footer!]
   footersCount(where: FooterWhereInput! = {id: {equals: 1}}): Int
-  galleryTags(where: GalleryTagWhereInput! = {}, orderBy: [GalleryTagOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: GalleryTagWhereUniqueInput): [GalleryTag!]
   galleryTag(where: GalleryTagWhereUniqueInput!): GalleryTag
+  galleryTags(where: GalleryTagWhereInput! = {}, orderBy: [GalleryTagOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: GalleryTagWhereUniqueInput): [GalleryTag!]
   galleryTagsCount(where: GalleryTagWhereInput! = {}): Int
-  galleryImages(where: GalleryImageWhereInput! = {}, orderBy: [GalleryImageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: GalleryImageWhereUniqueInput): [GalleryImage!]
   galleryImage(where: GalleryImageWhereUniqueInput!): GalleryImage
+  galleryImages(where: GalleryImageWhereInput! = {}, orderBy: [GalleryImageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: GalleryImageWhereUniqueInput): [GalleryImage!]
   galleryImagesCount(where: GalleryImageWhereInput! = {}): Int
-  trailPages(where: TrailPageWhereInput! = {id: {equals: 1}}, orderBy: [TrailPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: TrailPageWhereUniqueInput): [TrailPage!]
   trailPage(where: TrailPageWhereUniqueInput! = {id: 1}): TrailPage
+  trailPages(where: TrailPageWhereInput! = {id: {equals: 1}}, orderBy: [TrailPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: TrailPageWhereUniqueInput): [TrailPage!]
   trailPagesCount(where: TrailPageWhereInput! = {id: {equals: 1}}): Int
-  trails(where: TrailWhereInput! = {}, orderBy: [TrailOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: TrailWhereUniqueInput): [Trail!]
   trail(where: TrailWhereUniqueInput!): Trail
+  trails(where: TrailWhereInput! = {}, orderBy: [TrailOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: TrailWhereUniqueInput): [Trail!]
   trailsCount(where: TrailWhereInput! = {}): Int
-  maps(where: MapWhereInput! = {id: {equals: 1}}, orderBy: [MapOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: MapWhereUniqueInput): [Map!]
   map(where: MapWhereUniqueInput! = {id: 1}): Map
+  maps(where: MapWhereInput! = {id: {equals: 1}}, orderBy: [MapOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: MapWhereUniqueInput): [Map!]
   mapsCount(where: MapWhereInput! = {id: {equals: 1}}): Int
-  privacies(where: PrivacyWhereInput! = {id: {equals: 1}}, orderBy: [PrivacyOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: PrivacyWhereUniqueInput): [Privacy!]
   privacy(where: PrivacyWhereUniqueInput! = {id: 1}): Privacy
+  privacies(where: PrivacyWhereInput! = {id: {equals: 1}}, orderBy: [PrivacyOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: PrivacyWhereUniqueInput): [Privacy!]
   privaciesCount(where: PrivacyWhereInput! = {id: {equals: 1}}): Int
-  disclaimers(where: DisclaimerWhereInput! = {id: {equals: 1}}, orderBy: [DisclaimerOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: DisclaimerWhereUniqueInput): [Disclaimer!]
   disclaimer(where: DisclaimerWhereUniqueInput! = {id: 1}): Disclaimer
+  disclaimers(where: DisclaimerWhereInput! = {id: {equals: 1}}, orderBy: [DisclaimerOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: DisclaimerWhereUniqueInput): [Disclaimer!]
   disclaimersCount(where: DisclaimerWhereInput! = {id: {equals: 1}}): Int
-  productsServicesPages(where: ProductsServicesPageWhereInput! = {id: {equals: 1}}, orderBy: [ProductsServicesPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: ProductsServicesPageWhereUniqueInput): [ProductsServicesPage!]
   productsServicesPage(where: ProductsServicesPageWhereUniqueInput! = {id: 1}): ProductsServicesPage
+  productsServicesPages(where: ProductsServicesPageWhereInput! = {id: {equals: 1}}, orderBy: [ProductsServicesPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: ProductsServicesPageWhereUniqueInput): [ProductsServicesPage!]
   productsServicesPagesCount(where: ProductsServicesPageWhereInput! = {id: {equals: 1}}): Int
-  products(where: ProductWhereInput! = {}, orderBy: [ProductOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: ProductWhereUniqueInput): [Product!]
   product(where: ProductWhereUniqueInput!): Product
+  products(where: ProductWhereInput! = {}, orderBy: [ProductOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: ProductWhereUniqueInput): [Product!]
   productsCount(where: ProductWhereInput! = {}): Int
-  ecosystemPages(where: EcosystemPageWhereInput! = {id: {equals: 1}}, orderBy: [EcosystemPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: EcosystemPageWhereUniqueInput): [EcosystemPage!]
   ecosystemPage(where: EcosystemPageWhereUniqueInput! = {id: 1}): EcosystemPage
+  ecosystemPages(where: EcosystemPageWhereInput! = {id: {equals: 1}}, orderBy: [EcosystemPageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: EcosystemPageWhereUniqueInput): [EcosystemPage!]
   ecosystemPagesCount(where: EcosystemPageWhereInput! = {id: {equals: 1}}): Int
-  organisms(where: OrganismWhereInput! = {}, orderBy: [OrganismOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: OrganismWhereUniqueInput): [Organism!]
   organism(where: OrganismWhereUniqueInput!): Organism
+  organisms(where: OrganismWhereInput! = {}, orderBy: [OrganismOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: OrganismWhereUniqueInput): [Organism!]
   organismsCount(where: OrganismWhereInput! = {}): Int
-  mailRecipients(where: MailRecipientWhereInput! = {}, orderBy: [MailRecipientOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: MailRecipientWhereUniqueInput): [MailRecipient!]
   mailRecipient(where: MailRecipientWhereUniqueInput!): MailRecipient
+  mailRecipients(where: MailRecipientWhereInput! = {}, orderBy: [MailRecipientOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: MailRecipientWhereUniqueInput): [MailRecipient!]
   mailRecipientsCount(where: MailRecipientWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
@@ -1165,23 +1165,25 @@ type KeystoneAdminMeta {
 
 type KeystoneAdminUIListMeta {
   key: String!
-  itemQueryName: String!
-  listQueryName: String!
-  hideCreate: Boolean!
-  hideDelete: Boolean!
   path: String!
   label: String!
   singular: String!
   plural: String!
   description: String
-  initialColumns: [String!]!
   pageSize: Int!
   labelField: String!
   fields: [KeystoneAdminUIFieldMeta!]!
   groups: [KeystoneAdminUIFieldGroupMeta!]!
+  graphql: KeystoneAdminUIGraphQL!
+  initialColumns: [String!]!
+  initialSearchFields: [String!]!
   initialSort: KeystoneAdminUISort
-  isHidden: Boolean!
   isSingleton: Boolean!
+  hideCreate: Boolean!
+  hideDelete: Boolean!
+  isHidden: Boolean!
+  itemQueryName: String!
+  listQueryName: String!
 }
 
 type KeystoneAdminUIFieldMeta {
@@ -1249,6 +1251,33 @@ type KeystoneAdminUIFieldGroupMeta {
   label: String!
   description: String
   fields: [KeystoneAdminUIFieldMeta!]!
+}
+
+type KeystoneAdminUIGraphQL {
+  names: KeystoneAdminUIGraphQLNames!
+}
+
+type KeystoneAdminUIGraphQLNames {
+  outputTypeName: String!
+  whereInputName: String!
+  whereUniqueInputName: String!
+  createInputName: String!
+  createMutationName: String!
+  createManyMutationName: String!
+  relateToOneForCreateInputName: String!
+  relateToManyForCreateInputName: String!
+  itemQueryName: String!
+  listOrderName: String!
+  listQueryCountName: String!
+  listQueryName: String!
+  updateInputName: String!
+  updateMutationName: String!
+  updateManyInputName: String!
+  updateManyMutationName: String!
+  relateToOneForUpdateInputName: String!
+  relateToManyForUpdateInputName: String!
+  deleteMutationName: String!
+  deleteManyMutationName: String!
 }
 
 type KeystoneAdminUISort {
