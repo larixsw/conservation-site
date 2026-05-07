@@ -1,7 +1,7 @@
 import {GeolocateControl} from 'mapbox-gl'
 
 export class CustomGeolocateControl extends GeolocateControl {
-  _setupUI(supported) {
+  _setupUI(supported: boolean) {
     super._setupUI(supported)
     this._geolocateButton.classList.add('geolocate-button')
     this._geolocateButton.appendChild(document.createTextNode('Enable Geolocation'))
@@ -9,7 +9,10 @@ export class CustomGeolocateControl extends GeolocateControl {
 }
 
 export class ExitControl {
-  onAdd(map) {
+  public _map: any
+  public _container: HTMLDivElement | null = null
+
+  onAdd(map: any) {
     this._map = map
     this._container = document.createElement('div')
     this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group'
@@ -25,12 +28,12 @@ export class ExitControl {
     `
 
     this._container.addEventListener('contextmenu', e => e.preventDefault())
-    this._container.addEventListener('click', e => this.onClick())
+    this._container.addEventListener('click', () => this.onClick())
     return this._container
   }
 
   onRemove() {
-    this._container.parentNode.removeChild(this._container)
+    this._container?.parentNode?.removeChild(this._container)
     this._map = undefined
   }
 

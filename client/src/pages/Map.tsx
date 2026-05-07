@@ -3,7 +3,7 @@ import {useEffect, useRef} from 'react'
 import {useQuery, gql} from '@apollo/client'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-import {CustomGeolocateControl, ExitControl} from '../utils/mapbox_controls'
+import {CustomGeolocateControl, ExitControl} from '../utils/mapbox-controls'
 import {CoordPair} from '../utils/coordinates'
 import {TrailType} from './Trails'
 

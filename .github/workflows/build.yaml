@@ -18,11 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        service:
-          - name: client
-            context: ./client
-          - name: cms
-            context: ./cms
+        service: [client, cms]
 
     steps:
       - name: Checkout repository
@@ -38,11 +34,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push ${{ matrix.service.name }}
+      - name: Build and push ${{ matrix.service }}
         uses: docker/build-push-action@v5
         with:
-          context: ${{ matrix.service.context }}
+          context: ./${{ matrix.service }}
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.IMAGE_BASE_NAME }}/${{ matrix.service.name }}:latest
+            ${{ env.IMAGE_BASE_NAME }}/${{ matrix.service }}:latest
