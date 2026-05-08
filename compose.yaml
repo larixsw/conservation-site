@@ -1,0 +1,20 @@
+services:
+  client:
+    image: ghcr.io/larixsw/conservation-site/client:latest
+    volumes:
+      - ./env.js:/usr/share/nginx/html/env.js
+  cms:
+    image: ghcr.io/larixsw/conservation-site/cms:latest
+    volumes:
+      - ./keystone.db:/app/keystone.db
+      - ./storage/localImages:/app/storage/localImages
+    environment:
+      DATABASE_URL: file:./keystone.db
+      CLIENT_URL: http://conservation.larix.dev
+      API_URL: http://conservation-cms.larix.dev
+      SESSION_SECRET: secret
+  cf:
+    image: cloudflare/cloudflared:latest
+    environment:
+      TUNNEL_TOKEN: token
+    command: tunnel --no-autoupdate run
