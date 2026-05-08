@@ -86,7 +86,7 @@ const addLayers = (trail: TrailType, map: mapboxgl.Map) => {
 }
 
 function Mapbox() {
-  mapboxgl.accessToken = import.meta.env.VITE_APP_MAPBOX_TOKEN
+  mapboxgl.accessToken = window.env.MAPBOX_TOKEN
 
   const query = gql`
     query Map {

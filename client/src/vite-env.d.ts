@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
-interface ImportMetaEnv {
-  readonly VITE_APP_API_URL: string
-  readonly VITE_APP_MAPBOX_TOKEN: string
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv
+namespace globalThis {
+  interface Window {
+    env: {
+      API_URL: string
+      MAPBOX_TOKEN: string
+    }
+  }
 }
