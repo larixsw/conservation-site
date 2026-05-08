@@ -12,10 +12,10 @@ RUN npm run build
 FROM base
 
 COPY package*.json .
-RUN npm ci --production
-
-COPY --from=build .keystone .
 COPY migrations .
 COPY schema.prisma .
+COPY --from=build .keystone .
+
+RUN npm ci --omit=dev
 
 CMD ["npm", "start"]
