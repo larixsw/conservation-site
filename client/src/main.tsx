@@ -26,7 +26,7 @@ import MessagePage from './components/MessagePage'
 
 import './index.css'
 
-const apiUrl = import.meta.env.VITE_APP_API_URL
+const apiUrl = window.env.API_URL
 
 axios.defaults.baseURL = apiUrl
 const apollo = new ApolloClient({
