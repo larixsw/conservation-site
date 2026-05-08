@@ -70,12 +70,15 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-sm text-stone-300 p-4">
-        Copyright &copy; {new Date().getFullYear()} St. Margaret's Bay Area Woodland Conservation Site. Website made
-        by&nbsp;
-        <a className="underline" href="https://github.com/larix-dev" target="_blank" rel="noopener noreferrer">
+        Copyright &copy; {new Date().getFullYear()} French Village Woodland Conservation. Website made by&nbsp;
+        <a className="underline" href="https://github.com/larixsw" target="_blank" rel="noopener noreferrer">
           Larix Software
         </a>
-        &nbsp;at Saint Mary's University, Halifax, NS
+        &nbsp;at&nbsp;
+        <a className="underline" href="https://www.smu.ca/" target="_blank" rel="noopener noreferrer">
+          Saint Mary's University
+        </a>
+        , Halifax, NS.
       </div>
     </div>
   )

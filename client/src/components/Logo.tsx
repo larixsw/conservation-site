@@ -8,7 +8,7 @@ export default function Logo() {
       <div className="text-white flex gap-4 items-center font-logo font-semibold tracking-tighter">
         <img src={logoImage} alt="Forest Logo" className="h-12" />
         <span className="leading-tight">
-          St. Margaret's Bay Area
+          French Village
           <br />
           Woodland Conservation
         </span>
