@@ -5,17 +5,21 @@ WORKDIR /app
 
 FROM base AS build
 
-COPY . .
+COPY package*.json .
 RUN npm ci
+COPY . .
 RUN npm run build
 
 FROM base
 
 COPY package*.json .
-COPY migrations .
 COPY schema.prisma .
-COPY --from=build .keystone .
+COPY migrations ./migrations
+COPY --from=build /app/.keystone ./.keystone
 
 RUN npm ci --omit=dev
+
+ENV NODE_ENV=production
+EXPOSE 3000
 
 CMD ["npm", "start"]
