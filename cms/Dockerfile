@@ -11,16 +11,17 @@ RUN npm run build
 
 FROM base
 
-COPY package*.json .
-RUN npm ci --omit=dev --ignore-scripts
+ENV NODE_ENV=production
 
+COPY package*.json .
 COPY schema.prisma .
+
+RUN npm ci --omit=dev --ignore-scripts
 RUN npx prisma generate
 
 COPY migrations ./migrations
 COPY --from=build /app/.keystone ./.keystone
 
-ENV NODE_ENV=production
 EXPOSE 3000
 
 CMD ["npm", "start"]
