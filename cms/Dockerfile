@@ -1,18 +1,21 @@
-FROM node:alpine as build
+FROM node:alpine AS base
+
+RUN apk add --no-cache openssl
+WORKDIR /app
+
+FROM base AS build
 
 COPY . .
 RUN npm ci
 RUN npm run build
 
-FROM node:alpine
+FROM base
 
-RUN apk add --no-cache openssl
-
-COPY --from=build .keystone .keystone
-COPY --from=build package.json package.json
-COPY --from=build migrations migrations
-COPY --from=build schema.prisma schema.prisma
-
+COPY package*.json .
 RUN npm ci --production
+
+COPY --from=build .keystone .
+COPY migrations .
+COPY schema.prisma .
 
 CMD ["npm", "start"]
