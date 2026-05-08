@@ -1,10 +1,10 @@
 services:
   client:
-    image: ghcr.io/larixsw/conservation-site/client:latest
+    image: ghcr.io/larixsw/conservation-website/client:latest
     volumes:
       - ./env.js:/usr/share/nginx/html/env.js
   cms:
-    image: ghcr.io/larixsw/conservation-site/cms:latest
+    image: ghcr.io/larixsw/conservation-website/cms:latest
     volumes:
       - ./keystone.db:/app/keystone.db
       - ./storage/localImages:/app/storage/localImages
