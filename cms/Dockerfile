@@ -5,9 +5,8 @@ WORKDIR /app
 
 FROM base AS build
 
-COPY package*.json .
-RUN npm ci
 COPY . .
+RUN npm ci
 RUN npm run build
 
 FROM base
