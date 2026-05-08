@@ -17,7 +17,8 @@ COPY schema.prisma .
 COPY migrations ./migrations
 COPY --from=build /app/.keystone ./.keystone
 
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --ignore-scripts
+COPY --from=build /app/node_modules/.prisma ./node_modules/.prisma
 
 ENV NODE_ENV=production
 EXPOSE 3000
